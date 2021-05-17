@@ -2,6 +2,8 @@ from array_ds import Array
 from array_2d_ds import Grid
 from single_linked_list_ds import SingleLinkedList
 from double_linked_list_ds import DoubleLinkedList
+from stack_nodes_ds import StackNode
+from stack_array_ds import StackArray
 
 def array_ds_test():
     a = Array(6, "na")
@@ -73,8 +75,40 @@ def double_linked_list_ds_test():
     for l in linked_l.iterBackward():
         print(l)
 
+def stack_nodes_ds_test():
+    s = StackNode()
+    s.push("Na")
+    s.push("1")
+    s.push(2)
+    s.push(9.0)
+
+    s.peek()
+
+    while s.size:
+        print(s.pop())
+
+    print(s.pop())
+
+def stack_array_ds_test():
+    s = StackArray(4)
+    s.push("Na")
+    s.push("1")
+    s.push(2)
+    s.push(9.0)
+    s.push("Otra cosa")
+
+    s.peek()
+
+    while s.size:
+        print(s.pop())
+
+    print(s.pop())
+
+
 if __name__ == '__main__':
     #array_ds_test()
     #array_2d_ds_test()
     #single_linked_list_ds_test()
-    double_linked_list_ds_test()
+    #double_linked_list_ds_test()
+    #stack_nodes_ds_test()
+    stack_array_ds_test()
