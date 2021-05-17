@@ -1,9 +1,12 @@
+from queue_node_ds import QueueNodes
 from array_ds import Array
 from array_2d_ds import Grid
 from single_linked_list_ds import SingleLinkedList
 from double_linked_list_ds import DoubleLinkedList
 from stack_nodes_ds import StackNode
 from stack_array_ds import StackArray
+from queue_list_ds import QueueList
+from queue_node_ds import QueueNodes
 
 def array_ds_test():
     a = Array(6, "na")
@@ -104,6 +107,33 @@ def stack_array_ds_test():
 
     print(s.pop())
 
+def queue_list_ds_test():
+    q = QueueList()
+    q.enqueue("Na")
+    q.enqueue("1")
+    q.enqueue(2)
+    q.enqueue(9.0)
+
+    print("\nTraverse")
+    q.traverse()
+
+    print("\nDequeue")
+    while q.size:
+        print(q.dequeue())
+
+def queue_nodes_ds_test():
+    q = QueueNodes()
+    q.enqueue("Na")
+    q.enqueue("1")
+    q.enqueue(2)
+    q.enqueue(9.0)
+
+    print("\nDequeue")
+    while q.count:
+        print(q.dequeue())
+
+    q.dequeue()
+
 
 if __name__ == '__main__':
     #array_ds_test()
@@ -111,4 +141,6 @@ if __name__ == '__main__':
     #single_linked_list_ds_test()
     #double_linked_list_ds_test()
     #stack_nodes_ds_test()
-    stack_array_ds_test()
+    #stack_array_ds_test()
+    #queue_list_ds_test()
+    queue_nodes_ds_test()
